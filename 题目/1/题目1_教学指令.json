@@ -1,0 +1,38 @@
+[
+  {
+    "step": 0,
+    "action": "SETUP_HEADER",
+    "targets": [],
+    "content": "如图，矩形 $ABCD$ 中，$AB=3$，$AD=1$，点 $A, B$ 在数轴上。若以点 $A$ 为圆心，对角线 $AC$ 的长度为半径作弧交数轴的正半轴于点 $M$，则点 $M$ 表示的数为（ ）",
+    "speech": "同学们好！今天我们来研究一道数轴与几何综合题。解题的关键在于利用勾股定理求出线段长度，并结合数轴的坐标规律进行转化。",
+    "text_right": "数轴与矩形综合"
+  },
+  {
+    "step": 1,
+    "action": "DRAW_POLY",
+    "targets": ["A", "B", "C", "D"],
+    "speech": "首先，题目已知 $AB=3$，$AD=1$。根据矩形对边相等的性质，我们可以确定直角边 $BC$ 的长度也等于 1，这为我们后续构造直角三角形做好了准备。",
+    "text_right": "矩形ABCD：\nAB = 3\nBC = AD = 1"
+  },
+  {
+    "step": 2,
+    "action": "DRAW_LINE",
+    "targets": ["A", "C"],
+    "speech": "连接 $AC$。在直角三角形 $ABC$ 中，利用勾股定理，我们可以通过已知的两条直角边 $AB$ 和 $BC$ 计算出斜边 $AC$ 的长度。",
+    "text_right": "在Rt△ABC中：\nAC² = AB² + BC²\nAC = √10"
+  },
+  {
+    "step": 3,
+    "action": "DRAW_ARC",
+    "targets": ["A", "C", "M"],
+    "speech": "以点 $A$ 为圆心，将对角线 $AC$ 的长度“平移”到数轴上得到点 $M$。根据圆的半径相等的性质，线段 $AM$ 的长度就等于斜边 $AC$ 的长度。",
+    "text_right": "AM = AC = √10"
+  },
+  {
+    "step": 4,
+    "action": "HIGHLIGHT",
+    "targets": ["M", "A"],
+    "speech": "最后计算点 $M$ 的坐标。注意点 $A$ 表示的数是 $-1$，而点 $M$ 位于点 $A$ 的右侧，所以我们要用点 $A$ 的坐标加上线段 $AM$ 的长度。",
+    "text_right": "A点表示 -1\nM点在A点右侧\nM表示的数为：\n-1 + √10"
+  }
+]
