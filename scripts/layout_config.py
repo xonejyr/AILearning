@@ -15,9 +15,9 @@ UGP_CONFIG = {
     "layout_split_ratio": 0.45,
 
     # --- 3. 字体 ---
-    "font_size_header": 32,
-    "font_size_math": 36,
-    "font_size_subtitle": 28,
+    "font_size_header": 24,
+    "font_size_math": 28,
+    "font_size_subtitle": 24,
 
     # --- 4. 间距 ---
     "math_line_buff": 0.5,

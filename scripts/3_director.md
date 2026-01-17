@@ -15,6 +15,10 @@ To make the video easy to understand, you must follow these rules:
 1. **Audio-Visual Sync**: Never speak without showing. If you mention "Triangle ABC", you MUST trigger a `HIGHLIGHT` or `DRAW` action on it.
 2. **Progressive Disclosure**: Do NOT draw the whole figure at once. Build it up step-by-step as you explain.
 3. **Auxiliary Lines**: Draw dashed auxiliary lines ONLY when the explanation reaches that logic step.
+4. **Explicit Labeling**: When you draw a shape (triangle, rectangle), you MUST ensure the vertices are labeled. If `DRAW_SHAPE` doesn't do it automatically in your mind, verify it by adding logic steps.
+5. **The Base Layer**: If the problem involves a Number Line (1D) or Coordinate System (2D), DRAW IT FIRST using `DRAW_AXES` or a long `DRAW_LINE` with arrow.
+
+# The UGP Protocol v1.1
 
 # The UGP Contract v1.1 (Strict Command Set)
 
@@ -27,6 +31,9 @@ You can ONLY use these operations in the `actions` array:
 - **DRAW_ARC**: targets: [Center, Start, End].
 - **DRAW_AXES**: params: {"x_range": [-5,5], ...}.
 - **DRAW_FUNC**: expression: "x**2", x_range: [-3,3].
+- **DRAW_AXES**: 
+    - For 1D Number Line: `params: {"x_range": [-2, 5], "number_line": true}`
+    - For 2D Plane: `params: {"x_range": [...], "y_range": [...]}`
 
 ### B. Annotation
 - **ADD_MARKER**: types: ["right_angle", "tick", "angle", "parallel"]. targets: IDs.
